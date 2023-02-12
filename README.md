@@ -4,3 +4,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/16ca7a31c326032e24bc/maintainability)](https://codeclimate.com/github/AnastasiaMir/frontend-project-46/maintainability)
 ### Github actions:
 [![GitHub Actions Demo](https://github.com/AnastasiaMir/frontend-project-46/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/AnastasiaMir/frontend-project-46/actions/workflows/github-actions-demo.yml)
+### test coverage
+[![Test Coverage](https://api.codeclimate.com/v1/badges/16ca7a31c326032e24bc/test_coverage)](https://codeclimate.com/github/AnastasiaMir/frontend-project-46/test_coverage)
