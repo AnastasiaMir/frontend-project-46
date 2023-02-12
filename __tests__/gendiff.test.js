@@ -1,8 +1,17 @@
 import { test, expect } from '@jest/globals';
 import genDiff from '../src/index.js';
 
-const file1 = '../frontend-project-46/__fixtures__/file1.json';
-const file2 = '../frontend-project-46/__fixtures__/file2.json';
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const getFixturePath = (fileName) => path.join(__dirname, '..', '__fixtures__', fileName);
+
+
 const expectedResult = `{
  - follow: false
    host: hexlet.io
@@ -12,6 +21,6 @@ const expectedResult = `{
  + verbose: true
 }`;
 
-test('check differences', () => {
-  expect(genDiff(file1, file2)).toEqual(expectedResult);
+test('test1', () => {
+  expect(genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'))).toEqual(expectedResult);
 });
