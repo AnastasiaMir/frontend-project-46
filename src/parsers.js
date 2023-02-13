@@ -1,11 +1,11 @@
 import yaml from 'js-yaml';
 import { readFileSync } from 'node:fs';
 import path from 'path';
-import { cwd } from 'node:process';
+// import { cwd } from 'node:process';
 
 export default (filePath) => {
   const absolutePath = path.resolve(filePath);
-  console.log(absolutePath)
+  console.log(absolutePath);
   if ((path.extname(absolutePath) === '.yml') || (path.extname(absolutePath) === '.yaml')) {
     return yaml.load(readFileSync(absolutePath, 'utf-8'));
   }
@@ -13,5 +13,4 @@ export default (filePath) => {
     return JSON.parse(readFileSync(absolutePath, 'utf-8'));
   }
   return 'unexpected format of file';
-
 };

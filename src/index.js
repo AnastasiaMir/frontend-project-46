@@ -1,9 +1,9 @@
 import _ from 'lodash';
-import parser from './parsers.js'
+import parser from './parsers.js';
 
 const genDiff = (firstPath, secondPath) => {
-  const file1 = parser(firstPath)
-  const file2 = parser(secondPath)
+  const file1 = parser(firstPath);
+  const file2 = parser(secondPath);
   const file1keys = Object.keys(file1);
   const file2keys = Object.keys(file2);
   const allKeys = _.sortBy(_.union(file2keys, file1keys));
@@ -26,6 +26,5 @@ const genDiff = (firstPath, secondPath) => {
 
   return `{\n ${diffs.join('\n ')}\n}`;
 };
-
 
 export default genDiff;
