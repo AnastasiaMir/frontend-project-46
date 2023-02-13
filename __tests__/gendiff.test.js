@@ -24,4 +24,3 @@ test('test1 - Plainjson', () => {
 test('test2 - yml', () => {
   expect(genDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'))).toEqual(expectedResult);
 });
-
