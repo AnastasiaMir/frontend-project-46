@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import genDiff from '../src/index.js';
 import nestedDiff from '../__fixtures__/nestedDiff.js';
 import plainDiff from '../__fixtures__/plainDiff.js';
+import jsonDiff from '../__fixtures__/jsonDiff.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -20,6 +21,9 @@ test('test2 - nestedYmlStylish', () => {
 test('test3 - nestedYmlPlain', () => {
   expect(genDiff(getFixturePath('nested1.yml'), getFixturePath('nested2.yml'), 'plain')).toEqual(plainDiff);
 });
-test('test1 - nestedJsonStylish', () => {
+test('test4 - nestedJsonStylish', () => {
   expect(genDiff(getFixturePath('nested1.json'), getFixturePath('nested2.json'), 'plain')).toEqual(plainDiff);
+});
+test('test5 - nestedJson', () => {
+  expect(genDiff(getFixturePath('nested1.json'), getFixturePath('nested2.json'), 'json')).toEqual(jsonDiff);
 });
