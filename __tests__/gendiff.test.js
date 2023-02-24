@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 import genDiff from '../src/index.js';
 import nestedDiff from '../__fixtures__/nestedDiff.js';
 import plainDiff from '../__fixtures__/plainDiff.js';
-import jsonDiff from '../__fixtures__/jsonDiff.txt';
+import jsonDiff from '../__fixtures__/jsonDiff.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
