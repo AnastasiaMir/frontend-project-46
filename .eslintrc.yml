@@ -10,7 +10,7 @@ parserOptions:
   sourceType: module
 
 rules:
-  quotes: off
+  # quotes: off
   no-console: 0
   import/extensions: 
     - error

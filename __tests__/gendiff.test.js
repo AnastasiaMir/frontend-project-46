@@ -1,12 +1,12 @@
 import { test, expect } from '@jest/globals';
-
+import fs from 'fs';
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import genDiff from '../src/index.js';
 import nestedDiff from '../__fixtures__/nestedDiff.js';
 import plainDiff from '../__fixtures__/plainDiff.js';
-import jsonDiff from '../__fixtures__/jsonDiff.js';
-
+// import jsonDiff from '../__fixtures__/jsonDiff.json';
+const jsonDiff = JSON.stringify(JSON.parse(fs.readFileSync('__fixtures__/jsonDiff.json', 'utf8')));
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
